@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:practice/questions.dart';
 
 class AnswerButton extends StatelessWidget {
   const AnswerButton(
@@ -10,8 +9,15 @@ class AnswerButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: donothing,
-      child: Text(answerText),
+      onPressed: onTap,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.yellowAccent,
+        foregroundColor: Colors.black,
+      ),
+      child: Text(
+        answerText,
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }
